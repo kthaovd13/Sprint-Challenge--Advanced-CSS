@@ -4,6 +4,10 @@
 
   .intro {
 
+    img {
+      border-radius: 0.5rem;
+    }
+
     h2 {
       padding: 15px;
     }
@@ -11,12 +15,11 @@
     p {
       padding:0 15px;
     }
-  
   }
+  
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
+    .display-wrap();
     width: 100%;
 
     img {
@@ -58,6 +61,12 @@
       }
 
       .btn {
+        .button(flex, center);
+      }
+
+      .btn:hover {
+        background-color: white;
+        color: black;
       }
     }
 
