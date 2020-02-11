@@ -4,6 +4,19 @@
 
   .intro {
 
+    img {
+      border-radius: 0.5rem;
+      
+      @media @phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        border-radius: 15px;
+      }
+    }
+
     h2 {
       padding: 15px;
     }
@@ -11,19 +24,36 @@
     p {
       padding:0 15px;
     }
-  
   }
+  
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
+    .display-wrap();
     width: 100%;
+
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      padding: 0 15px;
+
+      .sky {
+        display: none;
+      }
+
+      .launch {
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+        width: 100%;
+      }
     }
   }
 
@@ -46,6 +76,12 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 0 15px;
+      width: 100%;
+    }
+
     .walk-text {
       width: 50%;
 
@@ -58,6 +94,25 @@
       }
 
       .btn {
+        .button(flex, center);
+
+        @media @phone {
+          padding: 25px 15px;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      .btn:hover {
+        background-color: white;
+        color: black;
+      }
+
+      @media @phone {
+        flex-direction: column-reverse;
+        padding: 0 15px;
+        width: 100%;
+        margin-top: 20px;
       }
     }
 
@@ -69,6 +124,11 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media @phone {
+          width: 200%;
+          margin-top: 20px;
+        }
       }
     }
   }
